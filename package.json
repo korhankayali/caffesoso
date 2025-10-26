@@ -2,7 +2,7 @@
   "name": "caffesoso-site",
   "version": "1.0.1",
   "private": true,
-  "homepage": "https://korhankayali.github.io/caffesoso",
+  "homepage": "https://caffesoso.com",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "react": "^18.2.0",
