@@ -1,0 +1,8 @@
+Deployment trigger file - Updated: 2025-01-26
+Latest changes:
+- Logo2 implementation
+- Opaque navbar (no transparency)
+- Inter font integration
+- Mobile responsive design
+- Footer navigation setup
+- GitHub Actions workflow
