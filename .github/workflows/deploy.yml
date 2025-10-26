@@ -3,8 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -13,23 +12,32 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-      
+      with:
+        fetch-depth: 0
+        clean: true
+        
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '18'
         cache: 'npm'
         
-    - name: Install dependencies
-      run: npm ci
+    - name: Clean install dependencies
+      run: |
+        rm -rf node_modules
+        rm -rf .npm
+        npm cache clean --force
+        npm ci
       
     - name: Build
       run: npm run build
       
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
-        cname: caffesoso.com
+        force_orphan: true
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
