@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/caffesoso/static/css/main.c44e39e2.css",
-    "main.js": "/caffesoso/static/js/main.e9bb90c7.js",
+    "main.css": "/caffesoso/static/css/main.2b5789b6.css",
+    "main.js": "/caffesoso/static/js/main.32fcc697.js",
     "index.html": "/caffesoso/index.html",
-    "main.c44e39e2.css.map": "/caffesoso/static/css/main.c44e39e2.css.map",
-    "main.e9bb90c7.js.map": "/caffesoso/static/js/main.e9bb90c7.js.map"
+    "main.2b5789b6.css.map": "/caffesoso/static/css/main.2b5789b6.css.map",
+    "main.32fcc697.js.map": "/caffesoso/static/js/main.32fcc697.js.map"
   },
   "entrypoints": [
-    "static/css/main.c44e39e2.css",
-    "static/js/main.e9bb90c7.js"
+    "static/css/main.2b5789b6.css",
+    "static/js/main.32fcc697.js"
   ]
 }
